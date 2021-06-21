@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <img src="_img/DEPOSITO1.png" width="600" alt="">
+    <form>
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-6 mb-3">
+        <!--<img src="_img/DEPOSITO1.png" width="500" alt="">-->
+        <h3>Formulario de Cadastro</h3>
+        <p>Informe os dados corretamente, pois os mesmos serão validados posteriormente com seu documento de identificação.</p>
+        <h5> &#9786; Informações pessoais</h5>
+        <div class="row">
+            <div class="col mb-3">
+              <input type="text" class="form-control" placeholder="Primeiro Nome" aria-label="nome" required>
+            </div>
+            <div class="col mb-3">
+              <input type="text" class="form-control" placeholder="sobrenome" aria-label="sobrenome" required>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" placeholder="CPF" aria-label="cpf" required>
+            </div>
+            <div class="col mb-3">
+                <input type="text" class="form-control" placeholder="Dia" aria-label="dia" required>
+            </div>
+            <div class="col mb-3">
+                <input type="text" class="form-control" placeholder="Mês" aria-label="mes" required>
+            </div>
+            <div class="col mb-5">
+                <input type="text" class="form-control" placeholder="Ano" aria-label="Ano" required>
+            </div>
+        </div>
+
+        <h5> &#9743; Informações de Contato</h5>
+
+        <div class="row">
+            <div class="col mb-3">
+                <input type="text" class="form-control" placeholder="E-mail" aria-label="email" required>
+            </div>
+            <div class="col mb-5">
+                <input type="text" class="form-control" placeholder="Telefone" aria-label="telefone" required>
+            </div>
+
+        </div>
+        <h5> &#9743; Informações de Login</h5>
+
+        <div class="row">
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" placeholder="Login" aria-label="login" required>
+                <div id="emailHelp" class="form-text">Seu nome de usuário deve conter apenas apenas letras, números e sublinhado. Não pode ter acentos ou caracteres especiais. O tamanho deve ser entre 5 e 15 caracteres
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Senha" aria-label="senha" required>
+                <div id="emailHelp" class="form-text">A senha deve conter entre 8 e 15 carateres e não pode conter seu nome de usuário</div>
+            </div>
+            <div class="col mb-3">
+                <input type="text" class="form-control" placeholder="Repetir Senha" aria-label="repetesenha" required>
+            </div>
+
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+            <label class="form-check-label" for="flexCheckDefault">
+                Ao realizar o cadastro afirmo ser maior de 18 anos e estou de acordo com todas as <a href="https://rondoesportes.com/rules/general-rules" target="_blank" rel="noopener noreferrer"> Gerais e Política de Privacidade.</a>
+            </label>
+          </div>
+          <p></p>
+           
+
+          
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+
+    </div>
+    </div>
+    </div>
+    </form>
+    
+
+
+
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</body>
+</html>
