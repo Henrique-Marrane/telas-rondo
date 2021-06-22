@@ -22,7 +22,7 @@
                     <input type="text" class="form-control form-control-sm" id="sobrenome" placeholder="Sobre Nome" required>
                 </div>
                 <div class="col-md-6 col-sm-12 mb-4">
-                    <input type="text" class="form-control form-control-sm" id="CPF" placeholder="CPF" required>
+                    <input type="text" class="form-control form-control-sm" id="CPFInput" oninput="criaMascara('CPF')" placeholder="CPF" maxlength="11" required>
                 </div>
                 <div class="col-md-2 col-sm-4 col-4">
                     <select class="form-select form-select-sm" aria-label="Default select example">
@@ -185,10 +185,10 @@
                 </div>
                 <h2 class="h5">&#9743; Informações de Contato</h2>
                 <div class="col-md-6 col-sm-12 mb-2">
-                    <input type="email" inputmode="numeric" class="form-control form-control-sm" id="tel" placeholder="E-mail" required>
+                    <input type="email" inputmode="numeric"  class="form-control form-control-sm" id="email" placeholder="E-mail" required>
                 </div>
                 <div class="col-md-6 col-sm-12 mb-4">
-                    <input type="text" inputmode="numeric" class="form-control form-control-sm" id="tel" placeholder="Telefone" required>
+                    <input type="text" class="form-control form-control-sm" id="CelularInput" placeholder="Telefone" maxlength="11" oninput="criaMascara('Celular')" required>
                 </div>
                 <h2 class="h5">&#9787; Informações de Login</h2>
                 <div class="col-md-6 col-sm-12 mb-4">
@@ -211,7 +211,7 @@
                         Ao realizar o cadastro afirmo ser maior de 18 anos e estou de acordo com todas as <a href="http://https://gruporondoesportes.com/bet/rules" target="_blank" rel="noopener noreferrer">Regras Gerais e Política de Privacidade.</a>
                     </label>
                   </div>
-                <button type="submit" class="btn btn-primary" onclick="return validarSenha()">Cadastrar</button>
+                <button type="submit" class="btn btn-primary mb-2" onclick="return validarSenha()">Cadastrar</button>
             </div>               
         </div>
     </form>
@@ -224,5 +224,21 @@
     <script src="js/jquery.mask.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/functionValidarSenha.js"></script>
+    <script>
+        function criaMascara(mascaraInput) {
+  const maximoInput = document.getElementById(`${mascaraInput}Input`).maxLength;
+  let valorInput = document.getElementById(`${mascaraInput}Input`).value;
+  let valorSemPonto = document.getElementById(`${mascaraInput}Input`).value.replace(/([^0-9])+/g, "");
+  const mascaras = {
+    CPF: valorInput.replace(/[^\d]/g, "").replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4"),
+    Celular: valorInput.replace(/[^\d]/g, "").replace(/^(\d{2})(\d{5})(\d{4})/, "($1) $2-$3"),
+    CEP: valorInput.replace(/[^\d]/g, "").replace(/(\d{5})(\d{3})/, "$1-$2"),
+    CNJ: valorInput.replace(/[^\d]/g, "").replace(/(\d{7})(\d{2})(\d{4})(\d{1})(\d{2})(\d{4})/, "$1-$2.$3.$4.$5.$6"),
+  };
+
+  valorInput.length === maximoInput ? document.getElementById(`${mascaraInput}Input`).value = mascaras[mascaraInput]
+ : document.getElementById(`${mascaraInput}Input`).value = valorSemPonto;
+};
+    </script>
 </body>
 </html>
