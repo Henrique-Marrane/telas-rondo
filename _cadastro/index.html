@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,88 +8,213 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-    <img src="_img/DEPOSITO1.png" width="600" alt="">
-    <form>
-    <div class="container">
-    <div class="row justify-content-center">
-    <div class="col-6 mb-3">
-        <!--<img src="_img/DEPOSITO1.png" width="500" alt="">-->
-        <h3>Formulario de Cadastro</h3>
-        <p>Informe os dados corretamente, pois os mesmos serão validados posteriormente com seu documento de identificação.</p>
-        <h5> &#9786; Informações pessoais</h5>
-        <div class="row">
-            <div class="col mb-3">
-              <input type="text" class="form-control" placeholder="Primeiro Nome" aria-label="nome" required>
-            </div>
-            <div class="col mb-3">
-              <input type="text" class="form-control" placeholder="sobrenome" aria-label="sobrenome" required>
-            </div>
-          </div>
-        <div class="row">
-            <div class="col-6 mb-3">
-                <input type="text" class="form-control" placeholder="CPF" aria-label="cpf" required>
-            </div>
-            <div class="col mb-3">
-                <input type="text" class="form-control" placeholder="Dia" aria-label="dia" required>
-            </div>
-            <div class="col mb-3">
-                <input type="text" class="form-control" placeholder="Mês" aria-label="mes" required>
-            </div>
-            <div class="col mb-5">
-                <input type="text" class="form-control" placeholder="Ano" aria-label="Ano" required>
-            </div>
-        </div>
-
-        <h5> &#9743; Informações de Contato</h5>
-
-        <div class="row">
-            <div class="col mb-3">
-                <input type="text" class="form-control" placeholder="E-mail" aria-label="email" required>
-            </div>
-            <div class="col mb-5">
-                <input type="text" class="form-control" placeholder="Telefone" aria-label="telefone" required>
-            </div>
-
-        </div>
-        <h5> &#9743; Informações de Login</h5>
-
-        <div class="row">
-            <div class="col-6 mb-3">
-                <input type="text" class="form-control" placeholder="Login" aria-label="login" required>
-                <div id="emailHelp" class="form-text">Seu nome de usuário deve conter apenas apenas letras, números e sublinhado. Não pode ter acentos ou caracteres especiais. O tamanho deve ser entre 5 e 15 caracteres
+    <form action="">
+        <div class="container col-6 justify-content-center">
+            <div class="row">
+                <img src="_img/DEPOSITO1.png" alt="">
+                <h1 class="h2">Formulario de Cadastro</h1>
+                <p>Informe os dados corretamente, pois os mesmos serão validados posteriormente com seu documento de identificação.</p>
+                <h2 class="h5">&#9786; Informações de Pessoais</h2>
+                <div class="col-md-6 col-sm-12 mb-2">
+                    <input type="text" class="form-control form-control-sm" id="nome" placeholder="Nome" required>
                 </div>
-            </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input type="text" class="form-control form-control-sm" id="sobrenome" placeholder="Sobre Nome" required>
+                </div>
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <input type="text" class="form-control form-control-sm" id="CPF" placeholder="CPF" required>
+                </div>
+                <div class="col-md-2 col-sm-4 col-4">
+                    <select class="form-select form-select-sm" aria-label="Default select example">
+                        <option selected>Dia</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
+                      </select>
+                </div>
+                <div class="col-md-2 col-sm-4 col-4">
+                    <select class="form-select form-select-sm" aria-label="Default select example">
+                        <option selected>Mês</option>
+                        <option>Janeiro</option>
+                        <option>Feveiro</option>
+                        <option>Março</option>
+                        <option>Abril</option>
+                        <option>Maio</option>
+                        <option>Junho</option>
+                        <option>MaJulho</option>
+                        <option>Agosto</option>
+                        <option>Setembro</option>
+                        <option>Outubro</option>
+                        <option>Novembro</option>
+                        <option>Dezembro</option>
+                      </select>
+                </div>
+                <div class="col-md-2 col-sm-4 col-4 mb-3">
+                    <select class="form-select form-select-sm" aria-label="Default select example">
+                        <option selected>Ano</option>
+                        <option>2021</option>
+                        <option>2020</option>
+                        <option>2019</option>
+                        <option>2018</option>
+                        <option>2017</option>
+                        <option>2016</option>
+                        <option>2015</option>
+                        <option>2014</option>
+                        <option>2013</option>
+                        <option>2012</option>
+                        <option>2011</option>
+                        <option>2010</option>
+                        <option>2009</option>
+                        <option>2008</option>
+                        <option>2007</option>
+                        <option>2006</option>
+                        <option>2005</option>
+                        <option>2004</option>
+                        <option>2003</option>
+                        <option>2002</option>
+                        <option>2001</option>
+                        <option>2000</option>
+                        <option>1999</option>
+                        <option>1998</option>
+                        <option>1997</option>
+                        <option>1996</option>
+                        <option>1995</option>
+                        <option>1994</option>
+                        <option>1993</option>
+                        <option>1992</option>
+                        <option>1991</option>
+                        <option>1990</option>
+                        <option>1989</option>
+                        <option>1988</option>
+                        <option>1987</option>
+                        <option>1986</option>
+                        <option>1985</option>
+                        <option>1984</option>
+                        <option>1983</option>
+                        <option>1982</option>
+                        <option>1981</option>
+                        <option>1980</option>
+                        <option>1979</option>
+                        <option>1978</option>
+                        <option>1977</option>
+                        <option>1976</option>
+                        <option>1975</option>
+                        <option>1974</option>
+                        <option>1973</option>
+                        <option>1972</option>
+                        <option>1971</option>
+                        <option>1970</option>
+                        <option>1969</option>
+                        <option>1968</option>
+                        <option>1967</option>
+                        <option>1966</option>
+                        <option>1965</option>
+                        <option>1964</option>
+                        <option>1963</option>
+                        <option>1962</option>
+                        <option>1961</option>
+                        <option>1960</option>
+                        <option>1959</option>
+                        <option>1958</option>
+                        <option>1957</option>
+                        <option>1956</option>
+                        <option>1955</option>
+                        <option>1954</option>
+                        <option>1953</option>
+                        <option>1952</option>
+                        <option>1951</option>
+                        <option>1950</option>
+                        <option>1949</option>
+                        <option>1948</option>
+                        <option>1947</option>
+                        <option>1946</option>
+                        <option>1945</option>
+                        <option>1944</option>
+                        <option>1943</option>
+                        <option>1942</option>
+                        <option>1941</option>
+                        <option>1940</option>
+                        <option>1939</option>
+                        <option>1938</option>
+                        <option>1937</option>
+                        <option>1936</option>
+                        <option>1935</option>
+                        <option>1934</option>
+                        <option>1933</option>
+                        <option>1932</option>
+                        <option>1931</option>
+                        <option>1930</option>
+                        <option>1929</option>
+                        <option>1928</option>
+                        <option>1927</option>
+                        <option>1926</option>
+                        <option>1925</option>
+                        <option>1924</option>
+                        <option>1923</option>
+                        <option>1922</option>
+                        <option>1921</option>
+                    </select>
+                </div>
+                <h2 class="h5">&#9743; Informações de Contato</h2>
+                <div class="col-md-6 col-sm-12 mb-2">
+                    <input type="email" inputmode="numeric" class="form-control form-control-sm" id="tel" placeholder="E-mail" required>
+                </div>
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <input type="text" inputmode="numeric" class="form-control form-control-sm" id="tel" placeholder="Telefone" required>
+                </div>
+                <h2 class="h5">&#9787; Informações de Login</h2>
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <input type="text" inputmode="numeric" class="form-control form-control-sm" id="login" placeholder="Login" minlength="5" maxlength="15" required>
+                    <div id="loginHelp" class="form-text">Seu nome de usuário deve conter apenas apenas letras, números e sublinhado. Não pode ter acentos ou caracteres especiais. O tamanho deve ser entre 5 e 15 caracteres</div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    
+                </div>
+                <div class="col-md-6 col-sm-12 mb-3">
+                    <input type="password" inputmode="numeric" class="form-control form-control-sm" id="password" placeholder="Senha" minlength="6" maxlength="15" required>
+                    <div id="loginHelp" class="form-text">A senha deve conter entre 6 e 15 carateres e não pode conter seu nome de usuário</div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <input type="password" inputmode="numeric" class="form-control form-control-sm" id="passwordR" placeholder="Repetir senha" minlength="6" maxlength="15" required>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="aceitaregra" required>
+                    <label class="form-check-label" for="aceitaregra">
+                        Ao realizar o cadastro afirmo ser maior de 18 anos e estou de acordo com todas as <a href="http://https://gruporondoesportes.com/bet/rules" target="_blank" rel="noopener noreferrer">Regras Gerais e Política de Privacidade.</a>
+                    </label>
+                  </div>
+                <button type="submit" class="btn btn-primary" onclick="return validarSenha()">Cadastrar</button>
+            </div>               
         </div>
-
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Senha" aria-label="senha" required>
-                <div id="emailHelp" class="form-text">A senha deve conter entre 8 e 15 carateres e não pode conter seu nome de usuário</div>
-            </div>
-            <div class="col mb-3">
-                <input type="text" class="form-control" placeholder="Repetir Senha" aria-label="repetesenha" required>
-            </div>
-
-        </div>
-
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-            <label class="form-check-label" for="flexCheckDefault">
-                Ao realizar o cadastro afirmo ser maior de 18 anos e estou de acordo com todas as <a href="https://rondoesportes.com/rules/general-rules" target="_blank" rel="noopener noreferrer"> Gerais e Política de Privacidade.</a>
-            </label>
-          </div>
-          <p></p>
-           
-
-          
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-
-    </div>
-    </div>
-    </div>
     </form>
-    
-
 
 
 
@@ -98,5 +223,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.mask.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/functionValidarSenha.js"></script>
 </body>
 </html>
