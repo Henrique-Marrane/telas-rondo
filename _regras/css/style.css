@@ -1,10 +1,21 @@
+body {
+  background-image: url(../img/_marcadagua.png);
+}
+
 ol li span {
   color: red;
 }
 
-ol { counter-reset: item }
-li{ display: block }
-li:before { content: counters(item, ".") " "; counter-increment: item }
+ol {
+  counter-reset: item;
+}
+li {
+  display: block;
+}
+li:before {
+  content: counters(item, '.') ' ';
+  counter-increment: item;
+}
 
 h2 {
   text-align: center;
@@ -22,4 +33,41 @@ table thead {
 
 table .tr {
   background-color: yellow;
+  margin: 0;
+}
+
+span {
+  color: red;
+}
+
+table thead th.permite {
+  background-color: green;
+  color: black;
+}
+
+table .tr2 {
+  background-color: coral;
+}
+
+table tr td.att {
+  background-color: yellow;
+}
+
+table tr td.inter {
+  background-color: red;
+}
+td {
+  text-align: center;
+}
+
+table tr td.permite {
+  background-color: green;
+}
+
+table tr td.cinza {
+  background-color: #c5c5c5;
+}
+
+img {
+  align-items: center;
 }
