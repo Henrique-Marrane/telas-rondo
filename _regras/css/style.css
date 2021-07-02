@@ -1,0 +1,25 @@
+ol li span {
+  color: red;
+}
+
+ol { counter-reset: item }
+li{ display: block }
+li:before { content: counters(item, ".") " "; counter-increment: item }
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+table thead {
+  text-align: center;
+  background-color: blue;
+  color: yellow;
+}
+
+table .tr {
+  background-color: yellow;
+}
