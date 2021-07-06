@@ -1,0 +1,75 @@
+html, body #home {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url(../_img/PAGE1_BACKGROUND.png);
+  background-repeat: no-repeat;
+  width: auto;
+}
+
+nav {
+  padding-top: 40px;
+  padding-left: 120px;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+
+.logo {
+  width: 800px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.primeira {
+  padding-bottom: 600px;
+}
+
+.page2 {
+  
+  width: 800px;
+  height: 800px;
+}
+
+section > p {
+  font-size: 2em;
+}
+
+p {
+  font-size: 2em;
+}
+
+.segunda {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.terceira {
+  background-image: url(../_img/backgroundlogo-2.png);
+  background-repeat: no-repeat;
+}
+
+.secao {
+  background-color: white;
+  margin: 40px;
+}
+
+
+
+ul {
+  font-size: 2em;
+}
+
+.logorondo {
+  align-items: center;
+}
+
+span {
+  text-align: center;
+}
