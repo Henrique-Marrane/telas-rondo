@@ -11,8 +11,12 @@ body{
 
 a {
   color: black;
-  padding-left: 50px;
+  /*padding-left: 50px;*/
 
+}
+
+.dispotivo {
+ margin-top: 10px;
 }
 
 a:hover {
