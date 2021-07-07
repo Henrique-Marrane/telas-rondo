@@ -1,75 +1,71 @@
-html, body #home {
-  height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  background-image: url(../_img/PAGE1_BACKGROUND.png);
+body{
+  background-image: url(../_img/PAGE1_BACKGROUND-2.png);
   background-repeat: no-repeat;
   width: auto;
-}
-
-nav {
-  padding-top: 40px;
-  padding-left: 120px;
-  font-size: 2em;
+  height: 100px;
 }
 
 a {
-  text-decoration: none;
   color: black;
-  padding: 5px;
+  padding-left: 50px;
+
 }
 
-.logo {
-  width: 800px;
-  padding-top: 50px;
-  padding-bottom: 100px;
+nav {
+  padding-top: 30px;
 }
 
-.primeira {
-  padding-bottom: 600px;
+header > img {
+  width: 600px;
+  padding-top: 40px;
+  padding-left: 50px;
 }
 
-.page2 {
-  
-  width: 800px;
-  height: 800px;
+header > h1 {
+  padding-left: 50px;
+  padding-top: 100px;
 }
 
-section > p {
-  font-size: 2em;
+header > p {
+  padding-left: 50px;
 }
 
-p {
-  font-size: 2em;
+.quemsou {
+  padding-top: 200px;
 }
 
-.segunda {
-  margin-top: 200px;
+.divisor {
   text-align: center;
-}
-
-.terceira {
-  background-image: url(../_img/backgroundlogo-2.png);
-  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 10px;
 }
 
 .secao {
+  background-image: url(../_img/backgroundlogo-2.png);
+  padding: 10px;
+  background-repeat: no-repeat;
+}
+
+.subsecao {
   background-color: white;
-  margin: 40px;
+  margin: 30px;
+  
+
 }
 
-
-
-ul {
-  font-size: 2em;
-}
-
-.logorondo {
+section > div > div > img {
   align-items: center;
 }
 
-span {
-  text-align: center;
+section > h3 {
+  padding: 20px;
+}
+
+section > div > div > p {
+  padding: 20px;
+}
+
+section > img {
+  width: 890px;
+  align-items: center;
 }
