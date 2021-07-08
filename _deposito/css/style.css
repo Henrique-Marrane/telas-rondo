@@ -15,4 +15,13 @@ body{
   margin-bottom: 10px;
 }
 
+.btn-primary {
+  background-color: #cea606;
+  border-color: #9c7f08;
+}
 
+
+.btn-primary:hover {
+  background-color: #ffcc02;
+  border-color: #ffcc02;
+}
