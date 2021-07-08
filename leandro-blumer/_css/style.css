@@ -23,6 +23,10 @@ span {
   color: rgb(182, 180, 180);
 }
 
+.centro {
+  text-align: center;
+}
+
 nav {
   padding-top: 30px;
 }
