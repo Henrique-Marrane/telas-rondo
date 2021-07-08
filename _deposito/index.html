@@ -1,447 +1,248 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deposito</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-  </head>
-  <body style="background-color: #c5c5c5;">
-    <div class="container col-6">
-      <div class="row">
-        <img src="_img/top.png" alt="" />
-      </div>
-      <ul
-        class="nav nav-tabs justify-content-center mt-2"
-        id="myTab"
-        role="tablist"
-      >
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link active"
-            id="home-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#home"
-            type="button"
-            role="tab"
-            aria-controls="home"
-            aria-selected="true"
-          >
-            Cartão de Crédito
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="profile-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#profile"
-            type="button"
-            role="tab"
-            aria-controls="profile"
-            aria-selected="false"
-          >
-            Boleto
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="contact-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#contact"
-            type="button"
-            role="tab"
-            aria-controls="contact"
-            aria-selected="false"
-          >
-            Transferencia Bancaria
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="tab4-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#tab4"
-            type="button"
-            role="tab"
-            aria-controls="tab4"
-            aria-selected="false"
-          >
-            Bitcoin
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="tab5-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#tab5"
-            type="button"
-            role="tab"
-            aria-controls="tab5"
-            aria-selected="false"
-          >
-            Neteller
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="tab6-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#tab6"
-            type="button"
-            role="tab"
-            aria-controls="tab6"
-            aria-selected="false"
-          >
-            AstroPay
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="tab7-tab"
-            data-bs-toggle="tab"
-            data-bs-target="#tab7"
-            type="button"
-            role="tab"
-            aria-controls="tab6"
-            aria-selected="false"
-          >
-            PIX
-          </button>
-        </li>
-      </ul>
-      <div class="tab-content" id="myTabContent">
-        <div
-          class="tab-pane fade show active"
-          id="home"
-          role="tabpanel"
-          aria-labelledby="home-tab"
-        >
-          <form>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-6">
-                  <h2>Depósito</h2>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Valor que deseja depositar</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="valordeposito"
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="alert alert-success" role="alert">
-                    O tempo para processamento e conferencia de transferencia
-                    pode levar até 3hr!!
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a
-                      class="btn btn-primary"
-                      href="file:///D:/WorkSpace/_deposito/itau.html"
-                      role="button"
-                      onclick="capiturar()"
-                      >Continuar</a
-                    >
-                  </div>
-                  <!--<p id="valorDigitado"></p>-->
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="profile"
-          role="tabpanel"
-          aria-labelledby="profile-tab"
-        >
-          <form>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-6">
-                  <h2>Depósito</h2>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Valor que deseja depositar</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="valordeposito"
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="alert alert-success" role="alert">
-                    O tempo para processamento e conferencia de transferencia
-                    pode levar até 3hr!!
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a
-                      class="btn btn-primary"
-                      href="#"
-                      role="button"
-                      onclick="capiturar()"
-                      >Continuar</a
-                    >
-                  </div>
-                  <!--<p id="valorDigitado"></p>-->
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="contact"
-          role="tabpanel"
-          aria-labelledby="contact-tab"
-        >
-          <form>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-6">
-                  <h2>Depósito</h2>
-                  <select
-                    class="form-select"
-                    aria-label="Default select example"
-                  >
-                    <option selected>Clique para selecionar o banco</option>
-                    <option value="1">Itaú</option>
-                    <option value="2">Caixa Economica Federal</option>
-                    <option value="3">Bradesco</option>
-                    <option value="4">Sicoob</option>
-                    <option value="5">Banco do Brasil</option>
-                    <option value="6">NuBank</option>
-                  </select>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Valor que deseja depositar</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="valordeposito"
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="alert alert-success" role="alert">
-                    O tempo para processamento e conferencia de transferencia
-                    pode levar até 3hr!!
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a
-                      class="btn btn-primary"
-                      href="#"
-                      role="button"
-                      onclick="capiturar()"
-                      >Continuar</a
-                    >
-                  </div>
-                  <!--<p id="valorDigitado"></p>-->
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="tab4"
-          role="tabpanel"
-          aria-labelledby="tab-tab"
-        >
-          <form>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-6">
-                  <h2>Depósito</h2>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Valor que deseja depositar</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="valordeposito"
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="alert alert-success" role="alert">
-                    O tempo para processamento e conferencia de transferencia
-                    pode levar até 3hr!!
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a
-                      class="btn btn-primary"
-                      href="#"
-                      role="button"
-                      onclick="capiturar()"
-                      >Continuar</a
-                    >
-                  </div>
-                  <!--<p id="valorDigitado"></p>-->
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="tab5"
-          role="tabpanel"
-          aria-labelledby="tab-tab"
-        >
-          <form>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-6">
-                  <h2>Depósito</h2>
-                  <div class="alert alert-success" role="alert">
-                    Abra sua conta Neteller, faça a transferência para o usuário
-                    abaixo e informe o pagamento.
-                    <p></p>
-                    <p><mark>eneias.ribeirogoncalves@gmail.com</mark></p>
-                  </div>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Valor que foi pago</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="valordeposito"
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Seu nome de usuário</label
-                    >
-                    <input type="text" class="form-control" id="nomeuser" />
-                    <div id="loginrondo" class="form-text">
-                      Seu nome de usuário do site Grupo Rondo Esportes.
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >E-mail Neteller</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="mailneteller"
-                    />
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a
-                      class="btn btn-primary"
-                      href="#"
-                      role="button"
-                      onclick="capiturar()"
-                      >Continuar</a
-                    >
-                  </div>
-                  <!--<p id="valorDigitado"></p>-->
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="tab6"
-          role="tabpanel"
-          aria-labelledby="tab-tab"
-        >
-          <form>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-6">
-                  <h2>Depósito</h2>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Valor que deseja depositar</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="valordeposito"
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="alert alert-success" role="alert">
-                    O tempo para processamento e conferencia de transferencia
-                    pode levar até 3hr!!
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a
-                      class="btn btn-primary"
-                      href="#"
-                      role="button"
-                      onclick="capiturar()"
-                      >Continuar</a
-                    >
-                  </div>
-                  <!--<p id="valorDigitado"></p>-->
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="tab7"
-          role="tabpanel"
-          aria-labelledby="contact-tab"
-        >
-          <form>
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-6">
-                  <h2>Depósito</h2>
-                  <div class="mb-3">
-                    <label for="valordeposito" class="form-label"
-                      >Valor que deseja depositar</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="valordeposito"
-                      inputmode="numeric"
-                    />
-                  </div>
-                  <div class="alert alert-success" role="alert">
-                    O tempo para processamento e conferencia de transferencia
-                    pode levar até 3hr!!
-                  </div>
-                  <div class="d-grid gap-2">
-                    <a
-                      class="btn btn-primary"
-                      href="#"
-                      role="button"
-                      onclick="capiturar()"
-                      >Continuar</a
-                    >
-                  </div>
-                  <!--<p id="valorDigitado"></p>-->
-                </div>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+    <title>Depósito</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container col-md-7">
+      <header>
+        <img class="col-md-12 img-fluid" src="_img/DEPOSITO1.png" alt="" />
+        <ul
+          class="nav nav-tabs tab justify-content-center"
+          id="myTab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="cartao-tab"
+              data-toggle="tab"
+              data-target="#cartao"
+              type="button"
+              role="tab"
+              aria-controls="cartao"
+              aria-selected="true"
+            >
+              <img class="img-fluid" src="_img/CARTAO-DEPOSITO-2.png" alt="" />
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="ted-tab"
+              data-toggle="tab"
+              data-target="#ted"
+              type="button"
+              role="tab"
+              aria-controls="transferencia"
+              aria-selected="false"
+            >
+              <img
+                class="img-fluid"
+                src="_img/TRANSFERENCIA-DEPOSITO.png"
+                alt=""
+              />
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pix-tab"
+              data-toggle="tab"
+              data-target="#pix"
+              type="button"
+              role="tab"
+              aria-controls="pix"
+              aria-selected="false"
+            >
+              <img src="_img/PIX-DEPOSITO-2.png" alt="" />
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="neteller-tab"
+              data-toggle="tab"
+              data-target="#neteller"
+              type="button"
+              role="tab"
+              aria-controls="neteller"
+              aria-selected="false"
+            >
+              <img src="_img/NETELLER-DEPOSITO-2.png" alt="" />
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="astro-tab"
+              data-toggle="tab"
+              data-target="#astro"
+              type="button"
+              role="tab"
+              aria-controls="astro"
+              aria-selected="false"
+            >
+              <img src="_img/ASTROPAY-DEPOSITO-2.png" alt="" />
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="bitcoin-tab"
+              data-toggle="tab"
+              data-target="#bitcoin"
+              type="button"
+              role="tab"
+              aria-controls="bitcoin"
+              aria-selected="false"
+            >
+              <img src="_img/BITCOIN-DEPOSITO-2.png" alt="" />
+            </button>
+          </li>
+        </ul>
+      </header>
+      <main>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="cartao"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <form class="col-md-6">
+              <label for="" class="form-label h3">Cartão de Credito</label>
+              <input
+                type="text"
+                id="valorDeposito"
+                class="form-control"
+                aria-describedby="valorDeposito"
+                placeholder="0.00"
+                required
+              />
+            </form>
+            <div class="alert alert-success mt-4 col-md-6" role="alert">
+              <p>Uma transferencia pode levar até 2hr para serem conferidas.</p>
+            </div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="ted"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <form class="col-md-6">
+              <label for="" class="form-label h3">Transferencia Bancaria</label>
+              <input
+                type="text"
+                id="valorDeposito"
+                class="form-control"
+                aria-describedby="valorDeposito"
+              />
+            </form>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pix"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <form class="col-md-6">
+              <label for="" class="form-label h3">Pix</label>
+              <input
+                type="text"
+                id="valorDeposito"
+                class="form-control"
+                aria-describedby="valorDeposito"
+              />
+            </form>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="neteller"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <form class="col-md-6">
+              <label for="" class="form-label h3">Neteller</label>
+              <input
+                type="text"
+                id="valorDeposito"
+                class="form-control"
+                aria-describedby="valorDeposito"
+              />
+            </form>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="astro"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <form class="col-md-6">
+              <label for="" class="form-label h3">AstroPay</label>
+              <input
+                type="text"
+                id="valorDeposito"
+                class="form-control"
+                aria-describedby="valorDeposito"
+              />
+            </form>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="bitcoin"
+            role="tabpanel"
+            aria-labelledby="contact-tab"
+          >
+            <form class="col-md-6">
+              <label for="" class="form-label h3">BitCoin</label>
+              <input
+                type="text"
+                id="valorDeposito"
+                class="form-control"
+                aria-describedby="valorDeposito"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="d-grid gap-2 d-md-block">
+          <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
+      </main>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
