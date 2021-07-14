@@ -1,3 +1,5 @@
+window.addEventListener('load', getDeposito)
+
 function getDeposito() {
   let formapag = $('#selected-pag').val()
   switch (formapag) {
@@ -49,7 +51,7 @@ function getDeposito() {
       $('#nubank').css('display', 'none')
       $('#bbrasil').css('display', 'block')
       break
-    default:
+    case '0':
       $('#itau').css('display', 'none')
       $('#caixa').css('display', 'none')
       $('#bradesco').css('display', 'none')

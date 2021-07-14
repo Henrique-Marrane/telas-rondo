@@ -144,11 +144,7 @@
                   <p>A transferencia pode levar até 2hr para ser processada.</p>
                 </div>
                 <div class="">
-                  <a
-                    class="btn btn-primary"
-                    onclick="gravar()"
-                    href="#"
-                    role="button"
+                  <a class="btn btn-primary" href="#" role="button"
                     >Continuar</a
                   >
                 </div>
@@ -169,6 +165,7 @@
                     name=""
                     id="selected-pag"
                     onclick="getDeposito()"
+                    required
                   >
                     <option selected value="0">
                       Clique aqui pra selecionar o banco
@@ -187,8 +184,8 @@
                   id="valorDeposito"
                   class="form-control"
                   aria-describedby="valorDeposito"
-                  placeholder="0.00"
                   required
+                  value="10.00"
                   oninput="this.value = SimpleMaskMoney.format(this.value);"
                 />
 
