@@ -1,121 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saque</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body>
     <form>
-        <div class="container col-6">
-            <div class="row justify-content-center">
-                <img src="_img/top.png" alt="">
-                <h1 class="h2">Saque</h1>
-                <div class="col-md-6 col-12 mb-1">
-                    <input type="text" class="form-control form-control-sm" placeholder="Nome Do Titular" maxlength="30" readonly>
-                </div>
-                <div class="col-md-6 col-12 mb-3">
-                    <input type="text" class="form-control form-control-sm" placeholder="CPF" id="CPFInput" oninput="criaMascara('CPF')" maxlength="11" readonly>
-                </div>
-                <div class="col-md-6 col-12 mb-3">
-                    <select class="form-select form-select-sm" id="selected-pag" onclick="getPagamento()">
-                        <option selected>Clique e selecione o tipo de Transferência</option>
-                        <option value="ted">Transferencia Bancaria</option>
-                        <option value="tpix">Transferencia via PIX</option>
-                    </select>
-                </div>
-                <div class="col-md-6 col-12 mb-1">
-                    <select class="form-select form-select-sm" id="banco">
-                        <option selected>Clique e selecione o Banco</option>
-                        <option value="246">Banco ABC Brasil S.A. (246) </option>
-                        <option value="75">Banco ABN AMRO S.A. (75) </option>
-                        <option value="121">Banco Agibank S.A. (121) </option>
-                        <option value="25">Banco Alfa S.A. (25) </option>
-                        <option value="641">Banco Alvorada S.A. (641) </option>
-                        <option value="65">Banco Andbank (Brasil) S.A. (65) </option>
-                        <option value="96">Banco B3 S.A. (96) </option>
-                        <option value="24">Banco BANDEPE S.A. (24) </option>
-                        <option value="318">Banco BMG S.A. (318) </option>
-                        <option value="752">Banco BNP Paribas Brasil S.A. (752) </option>
-                        <option value="107">Banco BOCOM BBM S.A. (107) </option>
-                        <option value="237">Banco Bradesco S.A. (237) </option>
-                        <option value="218">Banco BS2 S.A. (218) </option>
-                        <option value="208">Banco BTG Pactual S.A. (208) </option>
-                        <option value="473">Banco Caixa Geral - Brasil S.A. (473) </option>
-                        <option value="40">Banco Cargill S.A. (40) </option>
-                        <option value="739">Banco Cetelem S.A. (739) </option>
-                        <option value="233">Banco Cifra S.A. (233) </option>
-                        <option value="745">Banco Citibank S.A. (745) </option>
-                        <option value="748">Banco Cooperativo Sicredi S.A. (748) </option>
-                        <option value="222">Banco Credit Agricole Brasil S.A. (222) </option>
-                        <option value="505">Banco Credit Suisse (Brasil) S.A. (505) </option>
-                        <option value="3">Banco da Amazônia S.A. (3) </option>
-                        <option value="83">Banco da China Brasil S.A. (83) </option>
-                        <option value="707">Banco Daycoval S.A. (707) </option>
-                        <option value="1">Banco do Brasil S.A. (1) </option>
-                        <option value="47">Banco do Estado de Sergipe S.A. (47) </option>
-                        <option value="37">Banco do Estado do Pará S.A. (37) </option>
-                        <option value="41">Banco do Estado do Rio Grande do Sul S.A. (41) </option>
-                        <option value="4">Banco do Nordeste do Brasil S.A. (4) </option>
-                        <option value="273">Banco E2 (273) </option>
-                        <option value="265">Banco Fator S.A. (265) </option>
-                        <option value="224">Banco Fibra S.A. (224) </option>
-                        <option value="626">Banco Ficsa S.A. (626) </option>
-                        <option value="94">Banco Finaxis S.A. (94) </option>
-                        <option value="612">Banco Guanabara S.A. (612) </option>
-                        <option value="12">Banco Inbursa S.A. (12) </option>
-                        <option value="604">Banco Industrial do Brasil S.A. (604) </option>
-                        <option value="653">Banco Indusval S.A. (653) </option>
-                        <option value="77">Banco Inter S.A. (77) </option>
-                        <option value="249">Banco Investcred Unibanco S.A. (249) </option>
-                        <option value="341">Banco Itaú Unibanco S.A. (341) </option>
-                        <option value="376">Banco J. P. Morgan S.A. (376) </option>
-                        <option value="74">Banco J. Safra S.A. (74) </option>
-                        <option value="217">Banco John Deere S.A. (217) </option>
-                        <option value="600">Banco Luso Brasileiro S.A. (600) </option>
-                        <option value="389">Banco Mercantil do Brasil S.A. (389) </option>
-                        <option value="370">Banco Mizuho do Brasil S.A. (370) </option>
-                        <option value="746">Banco Modal S.A. (746) </option>
-                        <option value="456">Banco MUFG Brasil S.A. (456) </option>
-                        <option value="169">Banco Olé Bonsucesso Consignado S.A. (169) </option>
-                        <option value="212">Banco Original S.A. (212) </option>
-                        <option value="623">Banco PAN S.A. (623) </option>
-                        <option value="611">Banco Paulista S.A. (611) </option>
-                        <option value="643">Banco Pine S.A. (643) </option>
-                        <option value="747">Banco Rabobank International Brasil S.A. (747) </option>
-                        <option value="633">Banco Rendimento S.A. (633) </option>
-                        <option value="120">Banco Rodobens S.A. (120) </option>
-                        <option value="422">Banco Safra S.A. (422) </option>
-                        <option value="33">Banco Santander  (Brasil)  S.A. (33) </option>                        
-                    </select>
-                </div>
-                <div class="col-md-6 col-12 mb-1">
-                    <input type="text" class="form-control form-control-sm" placeholder="Agência" required id="agencia">
-                </div>
-                <div class="col-md-6 col-12 mb-3">
-                    <input type="text" class="form-control form-control-sm" placeholder="Conta" required id="conta">
-                </div>
-                <div class="col-md-6 col-12 mb-1">
-                    <input type="text" class="form-control form-control-sm" placeholder="Pix" required id="chavepix">
-                </div>
-                <div class="col-md-6 col-12 mb-4">
-                    <input type="text" class="form-control form-control-sm" placeholder="Valor Solicitado" required>
-                </div>
-                <div class="col">
-                <button type="submit" class="btn btn-primary btn-sm">Solicitar</button>
-                </div>
-            </div>
+      <div class="container col-6">
+        <div class="row justify-content-center">
+          <img src="_img/top.png" alt="" />
+          <h1 class="h2">Saque</h1>
+          <div class="col-md-6 col-12 mb-1">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Nome Do Titular"
+              maxlength="30"
+              readonly
+            />
+          </div>
+          <div class="col-md-6 col-12 mb-3">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="CPF"
+              id="CPFInput"
+              oninput="criaMascara('CPF')"
+              maxlength="11"
+              readonly
+            />
+          </div>
+          <div class="col-md-6 col-12 mb-3">
+            <select
+              class="form-select form-select-sm"
+              id="selected-pag"
+              onclick="getPagamento()"
+            >
+              <option selected>
+                Clique e selecione o tipo de Transferência
+              </option>
+              <option value="ted">Transferencia Bancaria</option>
+              <option value="tpix">Transferencia via PIX</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-12 mb-1">
+            <select class="form-select form-select-sm" id="banco">
+              <option selected>Clique e selecione o Banco</option>
+              <option value="246">Banco ABC Brasil S.A. (246)</option>
+              <option value="75">Banco ABN AMRO S.A. (75)</option>
+              <option value="121">Banco Agibank S.A. (121)</option>
+              <option value="25">Banco Alfa S.A. (25)</option>
+              <option value="641">Banco Alvorada S.A. (641)</option>
+              <option value="65">Banco Andbank (Brasil) S.A. (65)</option>
+              <option value="96">Banco B3 S.A. (96)</option>
+              <option value="24">Banco BANDEPE S.A. (24)</option>
+              <option value="318">Banco BMG S.A. (318)</option>
+              <option value="752">Banco BNP Paribas Brasil S.A. (752)</option>
+              <option value="107">Banco BOCOM BBM S.A. (107)</option>
+              <option value="237">Banco Bradesco S.A. (237)</option>
+              <option value="218">Banco BS2 S.A. (218)</option>
+              <option value="208">Banco BTG Pactual S.A. (208)</option>
+              <option value="473">Banco Caixa Geral - Brasil S.A. (473)</option>
+              <option value="40">Banco Cargill S.A. (40)</option>
+              <option value="739">Banco Cetelem S.A. (739)</option>
+              <option value="233">Banco Cifra S.A. (233)</option>
+              <option value="745">Banco Citibank S.A. (745)</option>
+              <option value="748">Banco Cooperativo Sicredi S.A. (748)</option>
+              <option value="222">
+                Banco Credit Agricole Brasil S.A. (222)
+              </option>
+              <option value="505">
+                Banco Credit Suisse (Brasil) S.A. (505)
+              </option>
+              <option value="3">Banco da Amazônia S.A. (3)</option>
+              <option value="83">Banco da China Brasil S.A. (83)</option>
+              <option value="707">Banco Daycoval S.A. (707)</option>
+              <option value="1">Banco do Brasil S.A. (1)</option>
+              <option value="47">Banco do Estado de Sergipe S.A. (47)</option>
+              <option value="37">Banco do Estado do Pará S.A. (37)</option>
+              <option value="41">
+                Banco do Estado do Rio Grande do Sul S.A. (41)
+              </option>
+              <option value="4">Banco do Nordeste do Brasil S.A. (4)</option>
+              <option value="273">Banco E2 (273)</option>
+              <option value="265">Banco Fator S.A. (265)</option>
+              <option value="224">Banco Fibra S.A. (224)</option>
+              <option value="626">Banco Ficsa S.A. (626)</option>
+              <option value="94">Banco Finaxis S.A. (94)</option>
+              <option value="612">Banco Guanabara S.A. (612)</option>
+              <option value="12">Banco Inbursa S.A. (12)</option>
+              <option value="604">Banco Industrial do Brasil S.A. (604)</option>
+              <option value="653">Banco Indusval S.A. (653)</option>
+              <option value="77">Banco Inter S.A. (77)</option>
+              <option value="249">Banco Investcred Unibanco S.A. (249)</option>
+              <option value="341">Banco Itaú Unibanco S.A. (341)</option>
+              <option value="376">Banco J. P. Morgan S.A. (376)</option>
+              <option value="74">Banco J. Safra S.A. (74)</option>
+              <option value="217">Banco John Deere S.A. (217)</option>
+              <option value="600">Banco Luso Brasileiro S.A. (600)</option>
+              <option value="389">Banco Mercantil do Brasil S.A. (389)</option>
+              <option value="370">Banco Mizuho do Brasil S.A. (370)</option>
+              <option value="746">Banco Modal S.A. (746)</option>
+              <option value="456">Banco MUFG Brasil S.A. (456)</option>
+              <option value="169">
+                Banco Olé Bonsucesso Consignado S.A. (169)
+              </option>
+              <option value="212">Banco Original S.A. (212)</option>
+              <option value="623">Banco PAN S.A. (623)</option>
+              <option value="611">Banco Paulista S.A. (611)</option>
+              <option value="643">Banco Pine S.A. (643)</option>
+              <option value="747">
+                Banco Rabobank International Brasil S.A. (747)
+              </option>
+              <option value="633">Banco Rendimento S.A. (633)</option>
+              <option value="120">Banco Rodobens S.A. (120)</option>
+              <option value="422">Banco Safra S.A. (422)</option>
+              <option value="33">Banco Santander (Brasil) S.A. (33)</option>
+            </select>
+          </div>
+          <div class="col-md-6 col-12 mb-1">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Agência"
+              required
+              id="agencia"
+            />
+          </div>
+          <div class="col-md-6 col-12 mb-3">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Conta"
+              required
+              id="conta"
+            />
+          </div>
+          <div class="col-md-6 col-12 mb-1">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Valor Solicitado"
+              required
+              id="valors"
+              oninput="this.value = SimpleMaskMoney.format(this.value);"
+              onkeyup="send(event)"
+            />
+          </div>
+          <div class="col-md-6 col-12 mb-4">
+            <input
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Pix"
+              required
+              id="chavepix"
+            />
+          </div>
+          <div class="col-12" style="text-align: right">
+            <button type="submit" class="btn btn-primary btn-sm">
+              Solicitar
+            </button>
+          </div>
         </div>
+      </div>
     </form>
-    
-
 
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
-</body>
+    <script src="js/moneymask.js"></script>
+  </body>
 </html>
