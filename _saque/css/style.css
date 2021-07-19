@@ -1,0 +1,25 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #c5c5c5;
+}
+
+.bordadesc {
+  border: 2px solid;
+}
+
+.test {
+  text-align: justify;
+}
+
+.btn-primary {
+  background-color: #ff7500;
+  border-color: coral;
+}
+
+.btn-primary:hover {
+  background-color: #fa8723;
+  border-color: coral;
+}

@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
+    <link
+      rel="shortcut icon"
+      href="_img/logo_424px (1).png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined"
@@ -250,13 +255,14 @@
           <div class="col-md-6 col-sm-12 mb-4">
             <input
               type="text"
-              inputmode="numeric"
+              inputmode=""
               class="form-control form-control-sm"
               id="login"
               placeholder="Login"
               minlength="5"
               maxlength="15"
               required
+              pattern="[^'\´`~^,.?/ç]+"
             />
             <div id="loginHelp" class="form-text">
               Seu nome de usuário deve conter apenas apenas letras, números e
