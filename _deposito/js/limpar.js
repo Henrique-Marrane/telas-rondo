@@ -1,0 +1,3 @@
+function limpar() {
+  localStorage.clear()
+}

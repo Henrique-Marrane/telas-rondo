@@ -1,7 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <title>Depósito</title>
+    <link
+      rel="shortcut icon"
+      href="_img/logo_424px (1).png"
+      type="image/x-icon"
+    />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -119,115 +124,272 @@
         </ul>
       </header>
       <main>
-        <div class="tab-content" id="myTabContent">
-          <div
-            class="tab-pane fade show active"
-            id="cartao"
-            role="tabpanel"
-            aria-labelledby="home-tab"
-          >
-            <form class="col-md-6">
-              <label for="" class="form-label h3">Cartão de Credito</label>
-              <input
-                type="text"
-                id="valorDeposito"
-                class="form-control"
-                aria-describedby="valorDeposito"
+        <div class="row justify-content-center">
+          <form class="">
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="cartao"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <label for="" class="form-label h3">Cartão de Credito</label>
+                <input
+                  type="text"
+                  id="cartao"
+                  class="form-control"
+                  aria-describedby="valorDeposito"
+                  placeholder="0.00"
+                  required
+                  oninput="this.value = SimpleMaskMoney.format(this.value);"
+                  onkeyup="send(event)"
+                />
+                <!--  </form>-->
+                <div class="alert alert-success mt-4" role="alert">
+                  <p>A transferencia pode levar até 2hr para ser processada.</p>
+                </div>
+                <div class="">
+                  <a class="btn btn-primary" href="#" role="button"
+                    >Continuar</a
+                  >
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="ted"
+                role="tedpanel"
+                aria-labelledby="ted-tab"
                 placeholder="0.00"
                 required
-              />
-            </form>
-            <div class="alert alert-success mt-4 col-md-6" role="alert">
-              <p>A transferencia pode levar até 2hr para ser processada.</p>
+                oninput="this.value = SimpleMaskMoney.format(this.value);"
+              >
+                <p class="mt-4 mb-2 h3">Transferência Bancaria</p>
+                <div class="form-group">
+                  <select
+                    class="form-control"
+                    name=""
+                    id="selected-pag"
+                    onclick="getDeposito()"
+                    required
+                  >
+                    <option selected value="0">
+                      Clique aqui pra selecionar o banco
+                    </option>
+                    <option value="1">Itaú</option>
+                    <option value="2">Caixa Economica Federal</option>
+                    <option value="3">Bradesco</option>
+                    <option value="4">Sicoob</option>
+                    <option value="5">Nubank</option>
+                    <option value="6">Banco do Brasil</option>
+                  </select>
+                </div>
+                <input
+                  name="valorDeposito"
+                  type="text"
+                  id="valorDeposito"
+                  class="form-control"
+                  aria-describedby="valorDeposito"
+                  required
+                  value="10.00"
+                  oninput="this.value = SimpleMaskMoney.format(this.value);"
+                />
+
+                <div class="alert alert-success mt-4" role="alert">
+                  <p>A transferencia pode levar até 2hr para ser processada.</p>
+                </div>
+
+                <a
+                  id="itau"
+                  class="btn btn-primary"
+                  onclick="gravar()"
+                  href="itau.html"
+                  role="button"
+                  >Continuar</a
+                >
+                <a
+                  id="caixa"
+                  class="btn btn-primary"
+                  onclick="gravar()"
+                  href="caixa.html"
+                  role="button"
+                  >Continuar</a
+                >
+                <a
+                  id="bradesco"
+                  class="btn btn-primary"
+                  onclick="gravar()"
+                  href="bradesco.html"
+                  role="button"
+                  >Continuar</a
+                >
+                <a
+                  id="sicoob"
+                  class="btn btn-primary"
+                  onclick="gravar()"
+                  href="sicoob.html"
+                  role="button"
+                  >Continuar</a
+                >
+                <a
+                  id="nubank"
+                  class="btn btn-primary"
+                  onclick="gravar()"
+                  href="nubank.html"
+                  role="button"
+                  >Continuar</a
+                >
+                <a
+                  id="bbrasil"
+                  class="btn btn-primary"
+                  onclick="gravar()"
+                  href="bb.html"
+                  role="button"
+                  >Continuar</a
+                >
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pix"
+                role="pixpanel"
+                aria-labelledby="pix-tab"
+                placeholder="0.00"
+                required
+                oninput="this.value = SimpleMaskMoney.format(this.value);"
+              >
+                <label for="" class="form-label h3">Pix</label>
+                <input
+                  type="text"
+                  id="valorDeposito"
+                  name="valorDeposito"
+                  class="form-control"
+                  aria-describedby="valorDeposito"
+                  placeholder="0.00"
+                  required
+                  oninput="this.value = SimpleMaskMoney.format(this.value);"
+                />
+                <!--  </form>-->
+                <div class="alert alert-success mt-4" role="alert">
+                  <p>A transferencia pode levar até 2hr para ser processada.</p>
+                </div>
+                <a id="itau" class="btn btn-primary" href="#" role="button"
+                  >Continuar</a
+                >
+              </div>
+              <div
+                class="tab-pane fade"
+                id="neteller"
+                role="pixpanel"
+                aria-labelledby="pix-tab"
+                placeholder="0.00"
+                required
+                oninput="this.value = SimpleMaskMoney.format(this.value);"
+              >
+                <label for="" class="form-label h3">Neteller</label>
+                <p class="alert alert-success mt-4">
+                  Abra sua conta Neteller, faça a transferência para <br />
+                  o usuário abaixo e informe o pagamento.<br />
+                  <span>eneias.ribeirogoncalves@gmail.com</span>
+                </p>
+                <input
+                  class="form-control mb-2"
+                  type="text"
+                  placeholder="Nome do usário logado"
+                  aria-label="Disabled input example"
+                  disabled
+                />
+                <input
+                  type="text"
+                  id="valorDeposito"
+                  class="form-control mb-2"
+                  aria-describedby="valorDeposito"
+                  placeholder="0.00"
+                  required
+                  oninput="this.value = SimpleMaskMoney.format(this.value);"
+                />
+                <input
+                  type="text"
+                  id="emailneteller"
+                  class="form-control"
+                  aria-describedby="emailNeteller"
+                  placeholder="E-mail Neteller"
+                  required
+                />
+
+                <div class="alert alert-success mt-4" role="alert">
+                  <p>A transferencia pode levar até 2hr para ser processada.</p>
+                </div>
+                <a id="itau" class="btn btn-primary" href="#" role="button"
+                  >Continuar</a
+                >
+              </div>
+              <div
+                class="tab-pane fade"
+                id="astro"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                placeholder="0.00"
+                required
+                oninput="this.value = SimpleMaskMoney.format(this.value);"
+              >
+                <!--  <form>-->
+                <label for="" class="form-label h3">AstroPay</label>
+                <input
+                  type="text"
+                  id="valorDeposito"
+                  class="form-control"
+                  aria-describedby="valorDeposito"
+                  placeholder="0.00"
+                  required
+                  oninput="this.value = SimpleMaskMoney.format(this.value);"
+                />
+                <!--  </form>-->
+                <div class="alert alert-success mt-4" role="alert">
+                  <p>A transferencia pode levar até 2hr para ser processada.</p>
+                </div>
+                <a id="itau" class="btn btn-primary" href="#" role="button"
+                  >Continuar</a
+                >
+              </div>
+              <div
+                class="tab-pane fade"
+                id="bitcoin"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                placeholder="0.00"
+                required
+                oninput="this.value = SimpleMaskMoney.format(this.value);"
+              >
+                <!--  <form>-->
+                <label for="" class="form-label h3">BitCoin</label>
+                <input
+                  type="text"
+                  id="valorDeposito"
+                  class="form-control"
+                  aria-describedby="valorDeposito"
+                  placeholder="0.00"
+                  required
+                  oninput="this.value = SimpleMaskMoney.format(this.value);"
+                />
+                <!--  </form>-->
+                <div class="alert alert-success mt-4" role="alert">
+                  <p>A transferencia pode levar até 2hr para ser processada.</p>
+                </div>
+                <a id="itau" class="btn btn-primary" href="#" role="button"
+                  >Continuar</a
+                >
+              </div>
             </div>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="ted"
-            role="tabpanel"
-            aria-labelledby="profile-tab"
-          >
-            <form class="col-md-6">
-              <label for="" class="form-label h3">Transferencia Bancaria</label>
-              <input
-                type="text"
-                id="valorDeposito"
-                class="form-control"
-                aria-describedby="valorDeposito"
-              />
-            </form>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="pix"
-            role="tabpanel"
-            aria-labelledby="contact-tab"
-          >
-            <form class="col-md-6">
-              <label for="" class="form-label h3">Pix</label>
-              <input
-                type="text"
-                id="valorDeposito"
-                class="form-control"
-                aria-describedby="valorDeposito"
-              />
-            </form>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="neteller"
-            role="tabpanel"
-            aria-labelledby="contact-tab"
-          >
-            <form class="col-md-6">
-              <label for="" class="form-label h3">Neteller</label>
-              <input
-                type="text"
-                id="valorDeposito"
-                class="form-control"
-                aria-describedby="valorDeposito"
-              />
-            </form>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="astro"
-            role="tabpanel"
-            aria-labelledby="contact-tab"
-          >
-            <form class="col-md-6">
-              <label for="" class="form-label h3">AstroPay</label>
-              <input
-                type="text"
-                id="valorDeposito"
-                class="form-control"
-                aria-describedby="valorDeposito"
-              />
-            </form>
-          </div>
-          <div
-            class="tab-pane fade"
-            id="bitcoin"
-            role="tabpanel"
-            aria-labelledby="contact-tab"
-          >
-            <form class="col-md-6">
-              <label for="" class="form-label h3">BitCoin</label>
-              <input
-                type="text"
-                id="valorDeposito"
-                class="form-control"
-                aria-describedby="valorDeposito"
-              />
-            </form>
-          </div>
-        </div>
-        <div class="d-grid gap-2 d-md-block">
-          <input class="btn btn-primary col-md-6" type="submit" value="Submit" />
+          </form>
         </div>
       </main>
     </div>
+
     <!-- Optional JavaScript -->
+    <script src="js/moneymask.js"></script>
+    <script src="js/jquery.mask.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/botao.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

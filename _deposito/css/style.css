@@ -3,7 +3,7 @@ body{
 }
 
 .tab {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .nav-link {
@@ -24,4 +24,19 @@ body{
 .btn-primary:hover {
   background-color: #ffcc02;
   border-color: #ffcc02;
+}
+
+.emailnetellher {
+  background-color: #9c7f08;
+  font-weight: bold;
+  color: black;
+  border-radius: 4px;
+  text-align: center;
+}
+
+span {
+  background-color: #9c7f08;
+  border-radius: 2px;
+  color: black;
+  margin: 10px;
 }
